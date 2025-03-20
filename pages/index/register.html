@@ -7,71 +7,84 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./static/css/style1.css">
     <style>
-        /* Дополнительные стили для страницы регистрации */
+        body {
+            background: url('./static/videos/1479.gif') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
         .register-container {
-            position: relative;
-            z-index: 1;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0, 0.8);
             padding: 2rem;
             border-radius: 10px;
-            max-width: 400px;
-            margin: 0 auto;
-            margin-top: 100px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .cloud-background {
-            position: fixed;
-            top: 0;
-            left: 0;
+            max-width: 350px;
             width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: linear-gradient(to bottom, #87CEEB, #B0E0E6);
-            animation: moveClouds 20s linear infinite;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            color: white;
+            text-align: center;
         }
-
-        @keyframes moveClouds {
-            0% {
-                background-position: 0 0;
-            }
-            100% {
-                background-position: 100% 0;
-            }
+        .register-container h2 {
+            color: #007bff;
+        }
+        .form-control {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+        }
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .toggle-switch {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .toggle-switch input {
+            appearance: none;
+            width: 40px;
+            height: 20px;
+            background: gray;
+            border-radius: 10px;
+            position: relative;
+            cursor: pointer;
+        }
+        .toggle-switch input:checked {
+            background: #007bff;
         }
     </style>
 </head>
 <body>
-    <!-- Фон с облаками -->
-    <div class="cloud-background"></div>
-
-    <!-- Контейнер для формы регистрации -->
     <div class="register-container">
-        <h2 class="text-center mb-4">Регистрация</h2>
+        <h2>Регистрация</h2>
         <form>
             <div class="mb-3">
-                <label for="username" class="form-label">Имя пользователя</label>
-                <input type="text" class="form-control" id="username" required>
+                <input type="text" class="form-control" placeholder="Имя пользователя" required>
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
+                <input type="email" class="form-control" placeholder="Email" required>
             </div>
             <div class="mb-3">
-                <label for="password" class="form-label">Пароль</label>
-                <input type="password" class="form-control" id="password" required>
+                <input type="password" class="form-control" placeholder="Пароль" required>
             </div>
             <div class="mb-3">
-                <label for="confirm-password" class="form-label">Подтвердите пароль</label>
-                <input type="password" class="form-control" id="confirm-password" required>
+                <input type="password" class="form-control" placeholder="Подтвердите пароль" required>
+            </div>
+            <div class="toggle-switch mb-3">
+                <label>Запомнить меня</label>
+                <input type="checkbox">
             </div>
             <button type="submit" class="btn btn-primary w-100">Зарегистрироваться</button>
         </form>
-        <p class="text-center mt-3">
-            Уже есть аккаунт? <a href="#">Войти</a>
+        <p class="mt-3">
+            Уже есть аккаунт? <a href="#" style="color: #007bff;">Войти</a>
         </p>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
