@@ -160,7 +160,17 @@ section a:hover {
     color: #fffffe;
 }
 
-#bg-video {
+
+@keyframes moveClouds {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+#bg-video_reg {
     position: absolute;
     top: 0;
     left: 0;
@@ -295,4 +305,74 @@ footer .submit-button {
 }
 
 footer .submit-button:hover {
+
+    z-index: -2;
+    filter: brightness(0.7);
+}
+
+footer {
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+footer .container {
+    flex: 1;
+    min-width: 250px;
+    padding: 1rem;
+}
+
+.footer-contacts {
+    gap: 15px;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-contacts {
+        align-items: center;
+    }
+    
+    .footer-links {
+        padding-left: 0;
+        list-style: none;
+    }
+    
+    .contact-us {
+        max-width: 100%;
+    }
+    
+    .submit-button {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    footer .navbar-brand {
+        font-size: 1rem;
+    }
+    
+    footer h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    footer .container {
+        min-width: 100%;
+    }
+    
+    footer .email-input,
+    footer .message-input {
+        font-size: 0.9rem;
+    }
+    
+    .submit-button {
+        font-size: 0.9rem;
+    }
 }
