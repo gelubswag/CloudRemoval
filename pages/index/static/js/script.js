@@ -9,9 +9,9 @@ function scrollToSection(index) {
         isScrolling = true;
         sections[index].scrollIntoView({ behavior: 'smooth' });
 
-        setTimeout(() => {
-            isScrolling = false;
-        }, scrollDelay);
+        // setTimeout(() => {
+        //     isScrolling = false;
+        // }, scrollDelay);
     }
 }
 
@@ -29,17 +29,17 @@ window.addEventListener('wheel', (event) => {
 });
 
 
-const video = document.getElementById('bg-video');
-video.play();
+// const video = document.getElementById('bg-video');
+// video.play();
 
-if (pauseButton) {
-    pauseButton.addEventListener('click', function() {
-        if (video.paused) {
-            video.play();
-            pauseButton.textContent = 'Pause';
-        } else {
-            video.pause();
-            pauseButton.textContent = 'Play';
-        }
-    });
-}
+// if (pauseButton) {
+//     pauseButton.addEventListener('click', function() {
+//         if (video.paused) {
+//             video.play();
+//             pauseButton.textContent = 'Pause';
+//         } else {
+//             video.pause();
+//             pauseButton.textContent = 'Play';
+//         }
+//     });
+// }
